@@ -20,12 +20,12 @@ public class SecurityConfig { //spring security se su dung thog tin trong bean d
         //sử dụng User.builder() để tạo một đối tượng UserDetails.
         UserDetails user = User.builder()
                 .username("chinhdo1")
-                .password("{bcrypt}$2a$10$UHU/QY3Fi0Fl/nivEGMlJeq021R5Xg0qoYWJjea4Ho69c6fcH3rRC")
+                .password("$2a$10$kS74XMw16EANac6FOVM9GO5ULBANj3fRUVbYEYxskcEeObPj31mW2")
                 .roles("USER")
                 .build();
         UserDetails admin = User.builder()
                 .username("thaole")
-                .password("{bcrypt}$2a$10$kkzxjEKmD9exPtbBtlYInO..CBQWigRb.wlEvd2TAfYQ8Xj0zDQxK")
+                .password("$2a$10$kS74XMw16EANac6FOVM9GO5ULBANj3fRUVbYEYxskcEeObPj31mW2")
                 .roles("USER","ADMIN")
                 .build();
 

@@ -13,11 +13,10 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource(){ //DataSource này thường được sử dụng để thiết lập kết nối đến cơ sở dữ liệu.
         DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.driverClassName("org.postgresql.Driver");
-        dataSourceBuilder.url("jdbc:");
-        dataSourceBuilder.username("");
-        dataSourceBuilder.password("");
-
+        dataSourceBuilder.driverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        dataSourceBuilder.url("jdbc:sqlserver://localhost:1433;databaseName=retail_store");
+        dataSourceBuilder.username("sa");
+        dataSourceBuilder.password("12345");
         return dataSourceBuilder.build();
 
     }
