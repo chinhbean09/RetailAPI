@@ -12,12 +12,12 @@ public class DataSourceConfig {
     //chua thong tin ve config
     @Bean
     public DataSource dataSource(){ //DataSource này thường được sử dụng để thiết lập kết nối đến cơ sở dữ liệu.
-//        DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
-//        dataSourceBuilder.driverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-//        dataSourceBuilder.url("jdbc:sqlserver://localhost:1433;databaseName=retail_store");
-//        dataSourceBuilder.username("sa");
-//        dataSourceBuilder.password("12345");
-//        return dataSourceBuilder.build();
+        DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
+        dataSourceBuilder.driverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        dataSourceBuilder.url("jdbc:sqlserver://localhost:1433;databaseName=retail_store");
+        dataSourceBuilder.username("sa");
+        dataSourceBuilder.password("12345");
+        return dataSourceBuilder.build();
 
     }
 }
