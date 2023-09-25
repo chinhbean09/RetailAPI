@@ -29,10 +29,10 @@ public class SecurityConfig { //spring security se su dung thog tin trong bean d
                 .roles("USER","ADMIN")
                 .build();
 
-//        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-//        users.createUser(user);
-//        users.createUser(admin);
-//        return users;
+        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+        users.createUser(user);
+        users.createUser(admin);
+        return users;
     }
 
     @Bean //bean se biet duoc passwordEncoder la BCrypt
