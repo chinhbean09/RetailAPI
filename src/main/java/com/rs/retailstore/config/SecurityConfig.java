@@ -12,7 +12,7 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 
 import javax.sql.DataSource;
 
-@Configuration //de spring paste qua file class va no se define những config trong đây
+@Configuration //de spring scan qua file class va no se define những config trong đây
                 // de no biet bean cua chung ta la SecurityConfig, va no se tim trong SecurityConfig nhung cai bean nhu userDetailsService va InMemoryUserDetailsManager
 public class SecurityConfig { //spring security se su dung thog tin trong bean de no co the xac thuc cho chung ta
     @Bean //cho spring biet minh dang khoi tao bean và ta sẽ bỏ dữ liệu vào đây
@@ -29,10 +29,10 @@ public class SecurityConfig { //spring security se su dung thog tin trong bean d
                 .roles("USER","ADMIN")
                 .build();
 
-        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
-        users.createUser(user);
-        users.createUser(admin);
-        return users;
+//        JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+//        users.createUser(user);
+//        users.createUser(admin);
+//        return users;
     }
 
     @Bean //bean se biet duoc passwordEncoder la BCrypt
