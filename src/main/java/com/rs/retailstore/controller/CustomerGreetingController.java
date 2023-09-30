@@ -13,7 +13,7 @@ public class CustomerGreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     @GetMapping("/greeting")//khai bao getmapping de su sung phuong thuc get, cua ham greeting
-    public Greeting greeting(@RequestParam(value="gender",defaultValue = "0") boolean gender,
+    public Greeting greeting(@RequestParam(value="gender", defaultValue = "0") boolean gender,
                              @RequestParam(value="customerName", defaultValue = "Customer") String customerName){
     return Greeting.builder().id(counter.incrementAndGet())
             .content(String.format(greetingTemplate, gender ? "Mr.":"Ms.",customerName)).
